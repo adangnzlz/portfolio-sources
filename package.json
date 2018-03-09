@@ -1,0 +1,30 @@
+{
+  "name": "adangnzlz",
+  "version": "1.0.0",
+  "description": "Blog personal Adán optimizado para SEO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adán González López",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "connect-modrewrite": "^0.10.2",
+    "gulp-flatten": "^0.4.0",
+    "gulp-html-minifier": "^0.1.8"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.4.0",
+    "gulp-inject": "^4.3.0",
+    "gulp-inject-css": "^0.3.10",
+    "gulp-jshint": "^2.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-style-inject": "^0.1.0",
+    "jshint": "^2.9.5",
+    "run-sequence": "^2.2.1"
+  }
+}

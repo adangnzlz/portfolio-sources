@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    -webkit-transition: all 1.25s;
+    transition: all 1.25s;
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+    &.show {
+        opacity: 1;
+    }
+    img.profile {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+.custom-container {
+    padding: 25px 0px 150px 0px;
+    text-align: center;
+    @media (min-width: 767px) {
+        padding: 25px 100px 150px 100px;
+    }
+    p {
+        font-size: 15px!important;
+    }
+}
+
+b {
+    font-weight: bold;
+}
+
+.about-link {
+    font-weight: bold;
+    color: black!important;
+}
