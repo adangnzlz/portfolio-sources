@@ -12,12 +12,16 @@
     "browser-sync": "^2.23.6",
     "connect-modrewrite": "^0.10.2",
     "gulp-flatten": "^0.4.0",
-    "gulp-html-minifier": "^0.1.8"
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-rename": "^1.2.2"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.9.3",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.4.0",
+    "gulp-html-tag-include": "^1.0.1",
     "gulp-inject": "^4.3.0",
     "gulp-inject-css": "^0.3.10",
     "gulp-jshint": "^2.1.0",

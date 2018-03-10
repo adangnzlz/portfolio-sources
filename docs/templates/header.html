@@ -1,0 +1,32 @@
+<header>
+    <ul>
+        <li class="@@activehome">
+            <a class="link" href="/">Inicio</a>
+        </li>
+        <li class="@@activeabout">
+            <a class="link" href="/about.html">Sobre mí</a>
+        </li>
+        <li>
+            <a id="p1" onclick="$('#p1').popover('toggle'); event.stopPropagation();  $('#p2').popover('hide'); $('#p3').popover('hide'); $('#p4').popover('hide');"
+                data-placement="bottom" data-toggle="popover-jobs" title="¿Con quien he trabajado?">
+                <img class="cube" src="assets/blocks.svg">
+            </a>
+        </li>
+        <li>
+            <a id="p2" onclick="openCookiePopup(); event.stopPropagation();  $('#p1').popover('hide'); $('#p4').popover('hide');" data-placement="bottom"
+                data-toggle="popover-cookies-pre" title="''">
+                <img class="notifications" src="assets/notifications.svg">
+            </a>
+            <a id="p3" onclick="openCookiePopup(); event.stopPropagation();  $('#p1').popover('hide'); $('#p4').popover('hide');" data-placement="bottom"
+                data-toggle="popover-cookies-post" title="''">
+                <img class="notifications" src="assets/notifications.svg">
+            </a>
+        </li>
+        <li>
+            <a id="p4" onclick="$('#p4').popover('toggle');  event.stopPropagation(); $('#p2').popover('hide');$('#p3').popover('hide'); $('#p1').popover('hide');"
+                data-placement="bottom" data-toggle="popover-profile" title="''">
+                <img height="25" src="./assets/adan-gonzalez-lopez-small.png">
+            </a>
+        </li>
+    </ul>
+</header>
