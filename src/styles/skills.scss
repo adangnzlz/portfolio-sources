@@ -31,6 +31,7 @@
             }
         }
         @media(max-width: 1023px) {
+            max-width: 100%;
             margin: auto;
             padding: 0px 15px;
             h2 {
@@ -50,9 +51,9 @@
         }
         z-index: -1;
         img {
-            -ms-transform: translateX(60vw) scale(0.7);
-            -webkit-transform: translateX(60vw) scale(0.7);
-            transform: translateX(60vw) scale(0.7);
+            -ms-transform: translateX(60vw) scale(0.4);
+            -webkit-transform: translateX(60vw) scale(0.4);
+            transform: translateX(60vw) scale(0.4);
             transition: transform 2s;
             max-width: 700px;
             @media(max-width: 1400px) {
@@ -115,6 +116,12 @@
     color: white!important;
     .text-block {
         z-index: 2;
+        h2 {
+            margin-top: 0px;
+        }
+        @media(max-width: 1023px) {
+            width: 100%;
+        }
     }
     .tablet {
         position: relative;
@@ -132,26 +139,77 @@
             @media(max-width: 1200px) {
                 max-width: 600px;
             }
-            @media(max-width: 1024px) {
+            @media(max-width: 1023px) {
                 position: relative;
                 top: 100px;
                 padding: 20px;
             }
+        }
+        @media(max-width: 1023px) {
+            width: 100%;
+            margin: auto;
+            text-align: center;
         }
     }
     &.move {
         .tablet {
             img {
                 right: -100px;
-                top: 50px;
+                top: 0px;
                 -ms-transform: perspective(600px) rotateY(-0deg);
                 -webkit-transform: perspective(600px) rotateY(-0deg);
                 transform: perspective(600px) rotateY(-0deg);
-                @media(max-width: 1024px) {
+                @media(max-width: 1023px) {
                     margin: auto;
                     right: auto;
                     top: 100px;
                 }
+            }
+        }
+    }
+}
+
+.tecnologies {
+    position: relative;
+    padding: 150px 0;
+    padding-top: 200px;
+    min-height: 750px;
+    @media(max-width: 1200px) {
+        padding-top: 100px;
+        min-height: 500px;
+    }
+    .laptop-tecnologies {
+        position: absolute;
+        img {
+            max-width: 600px;
+            transform: scale(0);
+            transition: transform 1s;
+            @media(max-width: 1200px) {
+                max-width: 500px;
+            }
+            @media(max-width: 1023px) {
+                max-width: 100%;
+                margin-top: 25px;
+            }
+        }
+        @media(max-width: 1023px) {
+            position: relative;
+        }
+    }
+    .text-block {
+        right: 0px;
+        position: absolute;
+        h2 {
+            margin-top: 0px;
+        }
+        @media(max-width: 1023px) {
+            position: relative;
+        }
+    }
+    &.move {
+        .laptop-tecnologies {
+            img {
+                transform: scale(1);
             }
         }
     }

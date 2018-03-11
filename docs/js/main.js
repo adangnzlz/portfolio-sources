@@ -163,17 +163,22 @@ $(document).ready(function () {
         });
         window.addEventListener("scroll", function () {
             if (isScrolledIntoView('#punto-fuerte .text-block > p')) {
-                setTimeout(function () {
-                    if (!$('#about > section.punto-fuerte').hasClass('move')) {
-                        $('#about > section.punto-fuerte').addClass('move');
-                        activeTyping();
-                    }
-                }, 200);
+                if (!$('#about > section.punto-fuerte').hasClass('move')) {
+                    $('#about > section.punto-fuerte').addClass('move');
+                    activeTyping();
+                }
             }
             if (isScrolledIntoView('#analisis .text-block > p')) {
                 if (!$('#about > section.analisis').hasClass('move')) {
                     setTimeout(function () {
                         $('#about > section.analisis').addClass('move');
+                    }, 200);
+                }
+            }
+            if (isScrolledIntoView('#tecnologies .text-block  p')) {
+                if (!$('#about > section.tecnologies').hasClass('move')) {
+                    setTimeout(function () {
+                        $('#about > section.tecnologies').addClass('move');
                     }, 200);
                 }
             }
