@@ -162,10 +162,19 @@ $(document).ready(function () {
 
         });
         window.addEventListener("scroll", function () {
-            if (isScrolledIntoView('#about > section > div.text-block > h2')) {
-                if (!$('#about > section.punto-fuerte').hasClass('move')) {
-                    $('#about > section.punto-fuerte').addClass('move');
-                    activeTyping();
+            if (isScrolledIntoView('#punto-fuerte .text-block > p')) {
+                setTimeout(function () {
+                    if (!$('#about > section.punto-fuerte').hasClass('move')) {
+                        $('#about > section.punto-fuerte').addClass('move');
+                        activeTyping();
+                    }
+                }, 200);
+            }
+            if (isScrolledIntoView('#analisis .text-block > p')) {
+                if (!$('#about > section.analisis').hasClass('move')) {
+                    setTimeout(function () {
+                        $('#about > section.analisis').addClass('move');
+                    }, 200);
                 }
             }
         });
@@ -184,8 +193,8 @@ var isScrolledIntoView = function (elem) {
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 };
 
-var goNext = function(){
-    goToByScroll('next', 1000);
+var goNext = function () {
+    goToByScroll('analisis', 1000);
 };
 
 var activeTyping = function () {
