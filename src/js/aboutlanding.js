@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function () {
     if ($('#about').length > 0) {
         $('#about .intro-message ').addClass('in');
@@ -18,7 +16,6 @@ $(document).ready(function () {
 
     }
 });
-
-var nextAbout = function(){
+var nextAbout = function () {
     goToByScroll('punto-fuerte', 1000);
 };
