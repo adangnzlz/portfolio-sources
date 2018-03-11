@@ -1,8 +1,11 @@
-body, html {
+body,
+html {
     font-family: Arial;
     margin: 0;
     font-weight: 100;
-    &.no-overflow{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    &.no-overflow {
         overflow-y: hidden;
     }
 }
@@ -70,7 +73,6 @@ body, html {
     }
 }
 
-
 .relative {
     position: relative;
 }
@@ -126,7 +128,6 @@ input {
 }
 
 a {
-    font-size: 13px!important;
     color: rgba(0, 0, 0, 0.75) !important;
     margin: auto!important;
     &:hover {
@@ -241,6 +242,6 @@ textarea {
     padding-top: 10px!important;
 }
 
-.p0{
+.p0 {
     padding: 0px;
 }
