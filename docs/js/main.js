@@ -186,6 +186,27 @@ $(document).ready(function () {
 
     }
 
+    var words = [
+        { text: "SEO", weight: 20, color: "#06ceb1" },
+        { text: "TAGS", weight: 15, color: "#fafafa" },
+        { text: "META", weight: 15, color: "#fafafa" },
+        { text: "ASSETS", weight: 10, color: "#fafafa" },
+        { text: "ANALYTICS", weight: 15, color: "#06ceb1" },
+        { text: "URLS", weight: 15, color: "#fafafa" },
+        { text: "GOOGLE", weight: 15, color: "#fafafa" },
+        { text: "OPTIMIZATION", weight: 10, color: "#fafafa" },
+        { text: "DESCRIPTION", weight: 8, color: "#fafafa" },
+        { text: "ALT", weight: 8, color: "#fafafa" },
+        { text: "TITLE", weight: 8, color: "#fafafa" },
+        { text: "SEMANTIC", weight: 5, color: "#fafafa" },
+        { text: "LINK", weight: 5, color: "#fafafa" },
+        { text: "RANKING", weight: 5, color: "#fafafa" },
+        { text: "WEB", weight: 5, color: "#fafafa" }
+    ];
+    $('#seo-tags').jQCloud(words,
+        {
+            autoResize: true
+        });
 });
 
 var isScrolledIntoView = function (elem) {
@@ -256,4 +277,7 @@ var activeTyping = function () {
     setTimeout(function () {
         $('#about > section.punto-fuerte').addClass('move finish');
     }, 4150);
+
 };
+
+
