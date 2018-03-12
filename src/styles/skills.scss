@@ -130,7 +130,8 @@
         img {
             position: absolute;
             max-width: 700px;
-            transition: all 2s;
+            transition: none;
+            cursor: pointer;
             -ms-transform: perspective(600px) rotateY(-45deg) scale(0.8);
             -webkit-transform: perspective(600px) rotateY(-45deg) scale(0.8);
             transform: perspective(600px) rotateY(-45deg) scale(0.8);
@@ -157,6 +158,7 @@
             img {
                 right: -100px;
                 top: 0px;
+                transition: all 2s;
                 -ms-transform: perspective(600px) rotateY(-0deg);
                 -webkit-transform: perspective(600px) rotateY(-0deg);
                 transform: perspective(600px) rotateY(-0deg);
@@ -182,9 +184,10 @@
     .laptop-tecnologies {
         position: absolute;
         img {
+            cursor: pointer;
             max-width: 600px;
             transform: scale(0);
-            transition: transform 1s;
+            transition: none;
             @media(max-width: 1200px) {
                 max-width: 500px;
             }
@@ -210,6 +213,7 @@
     &.move {
         .laptop-tecnologies {
             img {
+                transition: transform 1s;
                 transform: scale(1);
             }
         }
@@ -226,6 +230,7 @@
         padding-bottom: 150px;
     }
     #seo-tags {
+        cursor: pointer;
         height: 100%;
         width: 100%;
         height: 100%;

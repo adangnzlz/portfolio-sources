@@ -114,8 +114,9 @@ gulp.task('serve', function () {
         },
         notify: false
     });
-    gulp.watch(['src/**/*'], function (callback) { runSequence('assets', 'templates', 'sass', 'concat') });
-    gulp.watch(['docs/**/*'], reload);
+    gulp.watch(['src/assets/**/*'], function (callback) { runSequence('assets', reload) });
+    gulp.watch(['src/styles/**/*', 'src/templates/**/*', 'src/robots.txt', 'src/sitemap.xml'], function (callback) { runSequence('templates', 'sass', reload) });
+    gulp.watch(['src/js/**/*'], function (callback) { runSequence('templates', 'sass', 'concat', reload) });
 });
 
 

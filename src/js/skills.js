@@ -98,3 +98,15 @@ var suavizarScroll = function () {
 
     });
 };
+
+var reloadAnimation = function (id, callback) {
+    $('#' + id).removeClass('move');
+    setTimeout(function () {
+        if (!$('#about > section.' + id).hasClass('move')) {
+            $('#about > section.' + id).addClass('move');
+            if (callback) {
+                callback();
+            }
+        }
+    }, 100);
+};
