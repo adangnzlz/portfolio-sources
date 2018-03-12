@@ -119,3 +119,4 @@ gulp.task('serve', function () {
 
 
 gulp.task('default', function (callback) { runSequence('assets', 'templates', 'sass', 'concat', 'serve') });
+gulp.task('prod', function (callback) { runSequence('assets', 'templates', 'sass', 'concat') });
