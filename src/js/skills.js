@@ -64,16 +64,7 @@ var activeTyped = function (id, strings, timeout) {
 };
 
 
-var isActiveScrollSection = function (id, callback) {
-    if (isScrolledIntoView('#' + id + ' .text-block > p')) {
-        if (!$('#about > section.' + id).hasClass('move')) {
-            $('#about > section.' + id).addClass('move');
-            if (callback) {
-                callback();
-            }
-        }
-    }
-};
+
 
 var activarAnimaciones = function () {
     window.addEventListener("scroll", function () {

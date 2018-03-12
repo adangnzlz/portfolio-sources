@@ -13,10 +13,10 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
 
-function goToByScroll(id, time) {
+var goToByScroll = function (id, time) {
     id = id.replace("link", "");
     $('html,body').animate({ scrollTop: $("#" + id).offset().top }, time);
-}
+};
 
 
 var getCookie = function (cname) {
@@ -33,4 +33,15 @@ var getCookie = function (cname) {
         }
     }
     return "";
+};
+
+var isActiveScrollSection = function (id, callback) {
+    if (isScrolledIntoView('#' + id + ' .text-block > p')) {
+        if (!$('#about > section.' + id).hasClass('move')) {
+            $('#about > section.' + id).addClass('move');
+            if (callback) {
+                callback();
+            }
+        }
+    }
 };

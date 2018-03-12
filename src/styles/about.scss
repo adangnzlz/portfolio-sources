@@ -129,17 +129,10 @@
                     display: none;
                 }
                 &.extra {
-                    position: relative;
                     margin-top: 100px;
                     margin-left: -40px;
                     display: block;
                     transition: all 0.6s;
-                    @media (min-width: 767px) {
-                        opacity: 0;
-                        &.showing {
-                            opacity: 1;
-                        }
-                    }
                 }
             }
             .bounce {
@@ -241,5 +234,14 @@
                 @media (min-width: 767px) {
                     font-size: 18px;
                 }
+            }
+        }
+
+        .content-section-b {
+            padding: 100px 0;
+            background-color: #232323;
+            color: white!important;
+            @media (max-width: 767px) {
+                padding: 50px 0px;
             }
         }

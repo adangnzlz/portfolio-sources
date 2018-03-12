@@ -26,18 +26,37 @@ gulp.task('modernizr', function () {
         .pipe(modernizr('./modernizr.js'))
         .pipe(gulp.dest("build/"))
 });
-
+{/* <script src="./assets/typed.js"></script>
+    <script src="./assets/jquery.js"></script>
+    <script src="./assets/bootstrap.js"></script>
+    <script src="./assets/TweenMax.js"></script>
+    <script src="./assets/ScrollToPlugin.js"></script>
+    <script src="./assets/jqcloud.js"></script>
+    <script src="./js/main.min.js"></script> */}
 // compile js
 gulp.task('concat', function () {
     var jsDest = 'docs/js'
-    return gulp.src('./src/js/**/*.js')
+    gulp.src(['./src/assets/js/jquery.js', './src/assets/js/bootstrap.js', './src/assets/js/typed.js', './src/assets/js/TweenMax.js', './src/assets/js/ScrollToPlugin.js', './src/assets/js/jqcloud.js'])
+        .pipe(concat('3party.js'))
+        .pipe(gulp.dest(jsDest))
+        .pipe(rename('3party.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(jsDest));
+    return gulp.src(['./src/js/**/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
         .pipe(gulp.dest(jsDest))
         .pipe(rename('main.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(jsDest));
+        .pipe(gulp.dest(jsDest)).on('end', function () {
+            gulp.src(['./docs/js/*.min.js'])
+                .pipe(concat('all.min.js'))
+                .pipe(gulp.dest('docs/')).on('end', function () {
+                    gulp.src('./docs/js', { read: false }).pipe(clean());
+                });;;
+        });
+
 });
 
 // sass processor
