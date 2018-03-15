@@ -7,6 +7,11 @@ $(document).ready(function () {
     } else {
         $('#p3').addClass('hide');
     }
+    setTimeout(function () {
+        if (!getCookie('aceptarCookies')) {
+            $('#p2').popover('toggle');
+        }
+    }, 2000);
 });
 
 var crearPopups = function () {
