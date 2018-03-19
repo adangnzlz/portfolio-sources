@@ -67,7 +67,7 @@ gulp.task('sass', function () {
         .pipe(flatten())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(cssDest)).on('end', function () {
-            gulp.src(['./docs/index.html', './docs/404.html', './docs/about.html'])
+            gulp.src(['./docs/index.html', './docs/index2.html', './docs/404.html', './docs/about.html'])
                 .pipe(injectCSS())
                 .pipe(gulp.dest('./docs/')).on('end', function () {
                     gulp.src(cssDest, { read: false }).pipe(clean());
@@ -88,7 +88,7 @@ gulp.task('templates', function () {
         .pipe(include())
         .pipe(flatten())
         .pipe(gulp.dest('docs/templates')).on('end', function () {
-            var files = ['./docs/templates/index.html', './docs/templates/404.html', './docs/templates/about.html'];
+            var files = ['./docs/templates/index.html', './docs/templates/index2.html', './docs/templates/404.html', './docs/templates/about.html'];
             gulp.src(files)
                 .pipe(htmlmin({ collapseWhitespace: true }))
                 .pipe(gulp.dest('./docs/')).on('end', function () {
