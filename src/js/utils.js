@@ -10,7 +10,9 @@ var isScrolledIntoView = function (elem) {
 
 
 window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
+    if ($('#home').length > 0) {
+        window.scrollTo(0, 0);
+    }
 };
 
 var goToByScroll = function (id, time) {
