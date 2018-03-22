@@ -67,7 +67,8 @@ var showSectionHome = function (userId, type) {
         db.collection("busquedas").add({
             text: $('input').val(),
             user: user,
-            trigger: type
+            trigger: type,
+            date: new Date()
         }).then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
         }).catch(function (error) {
