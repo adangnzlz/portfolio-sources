@@ -64,12 +64,20 @@ var showSectionHome = function (userId, type) {
             language: navigator.language,
             address: data
         };
+        var text = $('input').val();
+        // move this to server... ^^
+        $.ajax({
+            type: "POST",
+            url: 'https://hooks.slack.com/services/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',
+            data: '{"text": "' + text + '" }',
+            dataType: 'application/json'
+        });
         db.collection("busquedas").add({
             text: $('input').val(),
             user: user,
-            trigger: type,
-            date: new Date()
+            trigger: type
         }).then(function (docRef) {
+
             console.log("Document written with ID: ", docRef.id);
         }).catch(function (error) {
             console.error("Error adding document: ", error);
