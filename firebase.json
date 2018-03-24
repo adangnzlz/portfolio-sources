@@ -12,7 +12,9 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
   },
   "functions": {
     "predeploy": [
