@@ -19,6 +19,16 @@ footer {
     }
 }
 
+.svg-malt {
+    padding: 10px 20px;
+    height: 50px;
+    &:hover {
+        * {
+            fill: #ff5372 !important;
+        }
+    }
+}
+
 .designed {
     margin-top: -10px;
     font-size: 10px;

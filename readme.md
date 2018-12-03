@@ -1,5 +1,5 @@
 
-Enlace al blog: [demo](https://adangnzlz.github.io/blog-adangnzlz)
+Enlace al blog: [demo](https://adangonzalezlopez.com/blog-adangnzlz)
 
 Probado con versiones de node:
 
@@ -13,3 +13,7 @@ v6.9.1 -> npm 3.10.8
 # ejecutamos en local
 
 `gulp`
+
+
+# Desplegar nueva versión
+`firebase deploy`

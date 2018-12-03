@@ -54,7 +54,9 @@ $(document).ready(function () {
 var showSectionHome = function (userId, type) {
     $('body').removeClass('no-overflow');
     $('#aboutme').addClass('show');
-    goToByScroll('aboutme', 500);
+    var id = 'aboutme';
+    id = id.replace("link", "");
+    $('html,body').animate({ scrollTop: $("#" + id).offset().top -100 }, 500);
     var db = firebase.firestore();
     console.log(userId);
     $.getJSON('//freegeoip.net/json/?callback=?', function (data) {
@@ -65,7 +67,7 @@ var showSectionHome = function (userId, type) {
             address: data
         };
         var text = $('input').val();
-        // move this to server... ^^
+        // to move this to server side you need to pay... ^^
         $.ajax({
             type: "POST",
             url: 'https://hooks.slack.com/services/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',
