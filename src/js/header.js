@@ -34,7 +34,6 @@ var crearPopup = function (id, urltemplate) {
 
 var aceptarCookies = function () {
     document.cookie = "aceptarCookies=true";
-    console.log(document.cookie.aceptarCookies);
     $('#p2').popover('hide');
 };
 

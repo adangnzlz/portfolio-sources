@@ -59,7 +59,7 @@ var showSectionHome = function (userId, type) {
     $('html,body').animate({ scrollTop: $("#" + id).offset().top -100 }, 500);
     var db = firebase.firestore();
     console.log(userId);
-    $.getJSON('//freegeoip.net/json/?callback=?', function (data) {
+    $.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=784cf4adcd644eda8dff65726f653dda', function (data) {
         var user = {
             id: userId,
             userAgent: navigator.userAgent,
@@ -71,9 +71,10 @@ var showSectionHome = function (userId, type) {
         $.ajax({
             type: "POST",
             url: 'https://hooks.slack.com/services/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',
-            data: '{"text": "' + text + '" }',
+            data: '{"text": "' + text + ' | '+  data.city + '" }',
             dataType: 'application/json'
         });
+
         db.collection("busquedas").add({
             text: $('input').val(),
             user: user,

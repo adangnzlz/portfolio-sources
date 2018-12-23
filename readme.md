@@ -16,4 +16,8 @@ v6.9.1 -> npm 3.10.8
 
 
 # Desplegar nueva versión
+`gulp prod`
 `firebase deploy`
+
+
+no funciona con la ultima versión de node. Probar con 8.9.3
