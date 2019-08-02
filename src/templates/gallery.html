@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+
+  <head>
+    <include src="./other/head.html"></include>
+    <!-- inject-css ../docs/css/awesome.min.css -->
+    <!-- inject-css ../docs/css/bootstrap.min.css -->
+    <!-- inject-css ../docs/css/jqcloud2.min.css -->
+    <!-- inject-css ../docs/css/styles.min.css -->
+    <!-- inject-css ../docs/css/header.min.css -->
+    <!-- inject-css ../docs/css/footer.min.css -->
+    <!-- inject-css ../docs/css/gallery.min.css -->
+    <!-- inject-css ../docs/css/skills.min.css -->
+    <!-- inject-css ../docs/css/travels.min.css -->
+  </head>
+
+  <body id="body" onclick="$('#p1').popover('hide'); $('#p2').popover('hide'); $('#p3').popover('hide'); $('#p4').popover('hide')">
+    <include src="./layouts/header.html" activehome="" activeabout="" activegallery="active"></include>
+
+    <div id="gallery">
+        <div class="overlay">
+            <div class="overlay-inner">
+                <button class="close">× Close</button>
+                <img>
+            </div>
+        </div>
+
+        <section class="gallery-new">
+        </section>
+    </div>
+
+    <include src="./layouts/footer.html"></include>
+  </body>
+  <include src="./other/scripts.html"></include>
+
+
+
+
+
+</html>

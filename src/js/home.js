@@ -56,10 +56,10 @@ var showSectionHome = function (userId, type) {
     $('#aboutme').addClass('show');
     var id = 'aboutme';
     id = id.replace("link", "");
-    $('html,body').animate({ scrollTop: $("#" + id).offset().top -100 }, 500);
+    $('html,body').animate({ scrollTop: $("#" + id).offset().top - 100 }, 500);
     var db = firebase.firestore();
     console.log(userId);
-    $.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=784cf4adcd644eda8dff65726f653dda', function (data) {
+    $.getJSON('https://ipinfo.io?token=f058e19905f03c',function(data){
         var user = {
             id: userId,
             userAgent: navigator.userAgent,
@@ -71,7 +71,7 @@ var showSectionHome = function (userId, type) {
         $.ajax({
             type: "POST",
             url: 'https://hooks.slack.com/services/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',
-            data: '{"text": "' + text + ' | '+  data.city + '" }',
+            data: '{"text": "' + text + ' | ' + data.city+ ' | ' + data.region + '" }',
             dataType: 'application/json'
         });
 
