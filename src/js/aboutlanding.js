@@ -5,7 +5,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             new Typed('#typing', {
-                strings: ['#Front-End Architect', '#Web', '#App', '#Front-End Engineer'],
+                strings: ['#Front-End Architect', '#Web', '#PWA', '#Front-End Engineer'],
                 typeSpeed: 70,
                 backSpeed: 40,
                 loop: false,

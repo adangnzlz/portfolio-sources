@@ -1,0 +1,25 @@
+[debug] [2019-08-02T19:20:53.732Z] ----------------------------------------------------------------------
+[debug] [2019-08-02T19:20:53.736Z] Command:       /usr/local/bin/node /Users/adan_/.config/yarn/global/node_modules/.bin/firebase deploy --only hosting
+[debug] [2019-08-02T19:20:53.736Z] CLI Version:   6.6.0
+[debug] [2019-08-02T19:20:53.736Z] Platform:      darwin
+[debug] [2019-08-02T19:20:53.736Z] Node Version:  v10.14.2
+[debug] [2019-08-02T19:20:53.753Z] Time:          Fri Aug 02 2019 21:20:53 GMT+0200 (GMT+02:00)
+[debug] [2019-08-02T19:20:53.753Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-02T19:20:53.764Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-02T19:20:53.765Z] > authorizing via signed-in user
+[debug] [2019-08-02T19:20:53.765Z] [iam] checking project blogpersonal-2e02f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-08-02T19:20:53.767Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/blogpersonal-2e02f:testIamPermissions  
+
+[debug] [2019-08-02T19:20:54.688Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-02T19:20:54.689Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/blogpersonal-2e02f  
+ 
+[debug] [2019-08-02T19:20:54.957Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'blogpersonal-2e02f'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-08-02T19:20:57.115Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/blogpersonal-2e02f/versions  
+
