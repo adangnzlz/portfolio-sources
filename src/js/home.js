@@ -70,7 +70,7 @@ var showSectionHome = function (userId, type) {
         // to move this to server side you need to pay... ^^
         $.ajax({
             type: "POST",
-            url: 'https://hooks.slack.com/services/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',
+            url: 'https://hooks.slack.com/services/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',
             data: '{"text": "' + text + ' | ' + data.city+ ' | ' + data.region + '" }',
             dataType: 'application/json'
         });
