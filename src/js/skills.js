@@ -3,7 +3,7 @@
 
 $(document).ready(function () {
     if ($('#about').length > 0) {
-        suavizarScroll();
+        // suavizarScroll();
         activarAnimaciones();
         crearNubeTags();
     }
@@ -83,7 +83,6 @@ var suavizarScroll = function () {
     var scrollDistance = 170;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
     $window.on("mousewheel DOMMouseScroll", function (event) {
 
-        event.preventDefault();
 
         var delta = event.originalEvent.wheelDelta / 200 || -event.originalEvent.detail / 3;
         var scrollTop = $window.scrollTop();
