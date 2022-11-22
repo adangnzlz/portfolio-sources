@@ -9,7 +9,7 @@
   "author": "Adán González López",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.27.10",
     "connect-modrewrite": "^0.10.2",
     "gulp-flatten": "^0.4.0",
     "gulp-html-minifier": "^0.1.8",
